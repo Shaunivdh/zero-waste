@@ -2,7 +2,7 @@ import { useState } from "react";
 import GridButtons from "./GridButtons";
 import SuccessAlert from "./SuccessAlert";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://localhost:5050";
 const FormTemplate = () => {
   const [product, setProduct] = useState({
     firstname: "",
@@ -12,6 +12,7 @@ const FormTemplate = () => {
     amount: 0,
     phone_number: "",
     zip_code: "",
+    image:"",
     needed: false,
   });
 
@@ -74,6 +75,7 @@ const FormTemplate = () => {
         amount: 0,
         phone_number: "",
         zip_code: "",
+        image:"",
         needed: false,
       })
 
@@ -110,6 +112,18 @@ const FormTemplate = () => {
               onChange={(e) => handleChange(e)}
             ></input>
           </label>
+          
+          <label className="text-lg pb-1  text-slate-600">
+            Product image:
+            <input
+              className="rounded-md ml-1"
+              type="url"
+              name="image"
+              value={product.image}
+              onChange={(e) => handleChange(e)}
+            ></input>
+          </label>
+
 
           <div className=" text-slate-600">
             <p className="text-lg  text-slate-600">Type:</p>

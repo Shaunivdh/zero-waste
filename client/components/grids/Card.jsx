@@ -20,7 +20,7 @@ const Card = ({ product, deleteProduct }) => {
               </span>
             </button>
           </div>
-          <h1 className="card-title">Product: {product.name}</h1> <br /> Type:{" "}
+          <h1 className="card-title">Product:  <img src={product.image} alt={product.description} /> {product.name}</h1><br /> Type:{" "}
           {product.type} <br /> Description: <br /> {product.description} <br />{" "}
           Amount: {product.amount} <br /> Contact {product.firstname}:{" "}
           {product.phone_number} <br />{" "}

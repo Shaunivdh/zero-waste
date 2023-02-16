@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://localhost:5050";
 
 const SearchBarNew = ({ addZipCode, addProductName }) => {
   const [searchInput, setSearchInput] = useState("");

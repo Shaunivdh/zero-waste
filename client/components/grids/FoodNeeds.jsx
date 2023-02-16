@@ -2,7 +2,7 @@ import Card from "./Card";
 import React, { useState, useEffect } from "react";
 import SearchBarNew from "./SearchBarNew";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://localhost:5050";
 
 const FoodNeeds = () => {
   const [products, setProducts] = useState(null);

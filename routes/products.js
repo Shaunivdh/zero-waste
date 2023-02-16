@@ -107,12 +107,13 @@ router.post("/", async (req, res) => {
   const amount = req.body.amount;
   const phone_number = req.body.phone_number;
   const zip_code = req.body.zip_code;
+  const image = req.body.image;
   const needed = req.body.needed; 
   console.log(req.body)
 
   try {
     await db(
-      `INSERT INTO products (firstname, name, type, description, amount, phone_number, zip_code, needed) values ('${firstname}', '${name}', '${type}', '${description}', ${amount}, '${phone_number}', '${zip_code}', ${needed})`
+      `INSERT INTO products (firstname, name, type, description, amount, phone_number, zip_code, needed) values ('${firstname}', '${image}, '${name}', '${type}', '${description}', ${amount}, '${phone_number}', '${zip_code}', ${needed})`
     );
 
     //const results = await db("SELECT * FROM items ORDER BY id ASC;")
@@ -157,6 +158,7 @@ router.patch("/:id", async (req, res) => {
   const phone_number = req.body.phone_number;
   const zip_code = req.body.zip_code;
   const needed = req.body.needed;
+  const image = req.image.needed;
 
   try {
     const response = await db(`SELECT * FROM products WHERE id = ${id}`);
@@ -171,7 +173,7 @@ router.patch("/:id", async (req, res) => {
 
     await db(
       `UPDATE products SET firstname = '${newProduct.firstname}', name = '${newProduct.name}', type = '${newProduct.type}', 
-      description = '${newProduct.description}', amount = ${newProduct.amount}, phone_number = '${newProduct.phone_number}',
+      description = '${newProduct.description}', amount = ${newProduct.amount}, phone_number = '${newProduct.phone_number}', image = ${newProduct.image}
        zip_code = '${newProduct.zip_code}', needed = ${newProduct.needed} WHERE id = ${newProduct.id}`  /*    phone_number = '${phone_number}' zip_code = '${zip_code}', needed = ${needed} */
     );
 
