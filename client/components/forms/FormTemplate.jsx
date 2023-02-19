@@ -63,7 +63,7 @@ const FormTemplate = () => {
       await sleep(3000)
       setSuccess(false)
      
- /*      window.location.reload(); */
+//  /*      window.location.reload(); */
     } catch (error) {
       setError("Something went wrong! Please try again later.");
     } finally {

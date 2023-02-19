@@ -6,7 +6,7 @@ const Card = ({ product, deleteProduct }) => {
           style={{
             backgroundImage: `url("https://images.unsplash.com/photo-1454944338482-a69bb95894af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Ymxha2MlMjBhbmQlMjB3aGl0ZSUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60")`,
           }}
-          className="container card w-80 h-96 justify-center text-start bg-base-100 shadow-xl mb-6 card-body text-black "
+          className="container card w-80 h-56 justify-center text-start bg-base-100 shadow-xl mb-6 card-body text-black "
         >
           {" "}
           <div className="card-actions justify-end">
@@ -20,10 +20,11 @@ const Card = ({ product, deleteProduct }) => {
               </span>
             </button>
           </div>
-          <h1 className="card-title">Product:  <img src={product.image} alt={product.description} /> {product.name}</h1><br /> Type:{" "}
+          <img src={product.image} width="100" height="50" drop-shadow-lg alt={product.description} />
+          <h1 className="card-title">Product: {product.name}</h1><br /> Type:{" "}
           {product.type} <br /> Description: <br /> {product.description} <br />{" "}
           Amount: {product.amount} <br /> Contact {product.firstname}:{" "}
-          {product.phone_number} <br />{" "}
+          <a href={"tel:" + product.phone_number}>{product.phone_number}</a><br />{" "}
           <div className="">Zip code: {product.zip_code} </div>
         </div>
       </span>
@@ -32,3 +33,5 @@ const Card = ({ product, deleteProduct }) => {
 };
 
 export default Card;
+
+

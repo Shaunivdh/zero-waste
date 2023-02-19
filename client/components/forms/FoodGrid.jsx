@@ -18,4 +18,4 @@ const FoodGrid= () => {
   );
   };
   
-  export default FoodGrid;
+  export default FoodGrid; 

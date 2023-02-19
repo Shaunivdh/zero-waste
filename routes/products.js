@@ -113,7 +113,7 @@ router.post("/", async (req, res) => {
 
   try {
     await db(
-      `INSERT INTO products (firstname, name, type, description, amount, phone_number, zip_code, needed) values ('${firstname}', '${image}, '${name}', '${type}', '${description}', ${amount}, '${phone_number}', '${zip_code}', ${needed})`
+      `INSERT INTO products (firstname, image, name, type, description, amount, phone_number, zip_code, needed) values ('${firstname}', '${image}', '${name}', '${type}', '${description}', ${amount}, '${phone_number}', '${zip_code}', ${needed})`
     );
 
     //const results = await db("SELECT * FROM items ORDER BY id ASC;")
